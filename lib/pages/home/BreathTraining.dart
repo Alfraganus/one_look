@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-class TodoListCOlumn extends StatelessWidget {
-  const  TodoListCOlumn({super.key});
+class BreathTraining extends StatelessWidget {
+  const  BreathTraining({super.key});
 
   @override
   Widget build(BuildContext context) {

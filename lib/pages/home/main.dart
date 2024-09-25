@@ -4,8 +4,11 @@ import '../../Appbar.dart';
 import '../../static.dart';
 import 'HealthList.dart';
 import 'HealthStats.dart';
+import 'StepGoal.dart';
 import 'ToDoList.dart';
-import 'ToDoListContainerList.dart';
+import 'BreathTraining.dart';
+import 'VidaminD.dart';
+import 'omega.dart';
 
 class HomeMain extends StatelessWidget {
   const HomeMain({super.key});
@@ -35,7 +38,13 @@ class HomeMain extends StatelessWidget {
               SizedBox(height: 20),
               ToDoList(),
               SizedBox(height: 20),
-              TodoListCOlumn()
+              BreathTraining(),
+              SizedBox(height: 15 ),
+              Omega(),
+              SizedBox(height: 15 ),
+              Vidamind(),
+              SizedBox(height: 15 ),
+              Stepgoal(),
 
             ],
           ),
