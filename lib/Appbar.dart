@@ -30,6 +30,7 @@ PreferredSizeWidget buildCustomAppBar() {
       ),
     ),
   );
+
 }
 
 class HexColor extends Color {

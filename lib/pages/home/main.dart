@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../Appbar.dart';
+import '../../BottomNavigationBar.dart';
 import '../../static.dart';
 import 'HealthList.dart';
 import 'HealthStats.dart';
@@ -18,6 +19,7 @@ class HomeMain extends StatelessWidget {
 
     return Scaffold(
       appBar: buildCustomAppBar(),
+      bottomNavigationBar: buildCustomNavigationBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding:  EdgeInsets.only(left: 20),
