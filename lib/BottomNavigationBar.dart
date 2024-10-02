@@ -49,7 +49,7 @@ Container buildCustomNavigationBar() {
             ),
             padding: EdgeInsets.all(10), // Adds space around the icon
             child: Image.asset(
-              'assets/images/menu activity.png',
+              'assets/images/menu activity_Active.png',
               width: 25, // Adjust the size as needed
               height: 25,
             ),
@@ -58,8 +58,8 @@ Container buildCustomNavigationBar() {
         BottomNavigationBarItem(
           icon: CustomBottomNavBarItem(
             imagePath: controller.bottomMenuIndex.value == 2
-                ? 'assets/images/menu progress.png'
-                : 'assets/images/menu progress_active.png',
+                ? 'assets/images/menu progress_active.png'
+                : 'assets/images/menu progress.png',
           ),
           label: '',
           activeIcon: Container(
@@ -69,7 +69,7 @@ Container buildCustomNavigationBar() {
             ),
             padding: EdgeInsets.all(10), // Adds space around the icon
             child: Image.asset(
-              'assets/images/menu progress.png',
+              'assets/images/menu progress_active.png',
               width: 25, // Adjust the size as needed
               height: 25,
             ),
@@ -78,8 +78,8 @@ Container buildCustomNavigationBar() {
         BottomNavigationBarItem(
           icon: CustomBottomNavBarItem(
             imagePath: controller.bottomMenuIndex.value == 3
-                ? 'assets/images/menu settings.png'
-                : 'assets/images/menu settings_Active.png',
+                ? 'assets/images/menu settings_Active.png'
+                : 'assets/images/menu settings.png',
           ),
           label: '',
           activeIcon: Container(
@@ -87,11 +87,11 @@ Container buildCustomNavigationBar() {
               color: Colors.blue.withOpacity(0.2), // Light blue background
               shape: BoxShape.circle,
             ),
-            padding: EdgeInsets.all(10), // Adds space around the icon
+            padding: EdgeInsets.all(5), // Adds space around the icon
             child: Image.asset(
-              'assets/images/menu settings.png',
-              width: 25, // Adjust the size as needed
-              height: 25,
+              'assets/images/menu settings_Active.png',
+              width: 27, // Adjust the size as needed
+              height: 27,
             ),
           ),
         ),

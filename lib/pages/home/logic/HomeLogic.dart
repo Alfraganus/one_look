@@ -8,4 +8,6 @@ class HomelogicController extends GetxController  {
     bottomMenuIndex.value = index; // Update using .value
     print(bottomMenuIndex.value);
   }
+
+
 }
