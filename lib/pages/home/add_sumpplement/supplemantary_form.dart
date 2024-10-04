@@ -19,7 +19,7 @@ class _SupplementFormWidgetState extends State<SupplementFormWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,21 +30,21 @@ class _SupplementFormWidgetState extends State<SupplementFormWidget> {
           SizedBox(height: 10),
           Container(
             height: 80,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: supplementForms.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
+            child:Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: supplementForms.map((form) {
+                return Expanded(
+                  child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        selectedForm = supplementForms[index]['label'];
+                        selectedForm = form['label'];
                       });
                     },
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 8),
-                      padding: EdgeInsets.all(8.0),
+                      // padding: EdgeInsets.all(8.0),
                       decoration: BoxDecoration(
-                        color: selectedForm == supplementForms[index]['label']
+                        color: selectedForm == form['label']
                             ? Colors.blue.shade100
                             : Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -53,20 +53,21 @@ class _SupplementFormWidgetState extends State<SupplementFormWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            supplementForms[index]['icon'],
+                            form['icon'],
                             size: 30,
-                            color:
-                                selectedForm == supplementForms[index]['label']
-                                    ? Colors.blue
-                                    : Colors.grey,
+                            color: selectedForm == form['label']
+                                ? Colors.blue
+                                : Colors.grey,
                           ),
                           SizedBox(height: 5),
-                          Text(supplementForms[index]['label']),
+                          Text(form['label']),
                         ],
                       ),
                     ),
-                  );
-                }),
+                  ),
+                );
+              }).toList(),
+            ),
           )
         ],
       ),
