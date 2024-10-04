@@ -60,7 +60,7 @@ class CurrentPage extends StatelessWidget {
             SizedBox(height: 20),
             HealthStatsRow(),
             SizedBox(height: 20),
-            ToDoList(),
+            ToDoList(context),
             SizedBox(height: 20),
             BreathTraining(),
             SizedBox(height: 15 ),

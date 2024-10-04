@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import '../../Appbar.dart';
+import '../../modal.dart';
 import '../../static.dart';
 
-Row  ToDoList() {
+Row  ToDoList(BuildContext context) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
@@ -15,22 +16,27 @@ Row  ToDoList() {
       ),
       Padding(
         padding: const EdgeInsets.only(right: 20 ),
-        child: RichText(text: TextSpan(
-            children: [
-              WidgetSpan(child: Image.asset('assets/images/add.png',height: 24,),),
-              WidgetSpan(
-                child: SizedBox(width: 8),
-              ),
-              TextSpan(
-                text: ' Add task',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: HexColor(blueColor),
+        child: GestureDetector(
+          onTap:() {
+            showCustomDialog(context);
+          },
+          child: RichText(text: TextSpan(
+              children: [
+                WidgetSpan(child: Image.asset('assets/images/add.png',height: 24,),),
+                WidgetSpan(
+                  child: SizedBox(width: 8),
                 ),
-              ),
-            ]
-        )),
+                TextSpan(
+                  text: ' Add task',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: HexColor(blueColor),
+                  ),
+                ),
+              ]
+          )),
+        ),
       )
     ],
   );
