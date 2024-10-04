@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'Appbar.dart';
 
@@ -65,7 +67,8 @@ void showCustomDialog(BuildContext context) {
                   ),
                   child: TextButton(
                     onPressed: () {
-                      // Handle button press
+                      Navigator.of(context).pop();  // Close the dialog first
+                      Get.toNamed('/add_supplement');  // Then navigate to the screen
                     },
                     child: Text(
                       "Supplement",
