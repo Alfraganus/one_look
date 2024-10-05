@@ -3,6 +3,7 @@ import 'package:one_look/pages/home/add_sumpplement/supplemantary_form.dart';
 
 import '../../../Appbar.dart';
 import '../../../static.dart';
+import 'dosage.dart';
 
 class SupplementMain extends StatelessWidget {
   @override
@@ -54,7 +55,11 @@ class SupplementMain extends StatelessWidget {
             SizedBox(height:20),
             Divider(),
             SizedBox(height:10),
-            SupplementFormWidget()
+            SupplementFormWidget(),
+            SizedBox(height:10),
+            Divider(),
+            SizedBox(height:10),
+            DosageFormWidget()
           ],
         ),
       ),
