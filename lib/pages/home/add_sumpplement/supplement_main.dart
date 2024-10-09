@@ -59,7 +59,15 @@ class SupplementMain extends StatelessWidget {
             SizedBox(height:10),
             Divider(),
             SizedBox(height:10),
-            DosageFormWidget()
+            DosageFormWidget(),
+            SizedBox(height:10),
+            Divider(),
+            SizedBox(height:10),
+            Text(
+              "Frequency",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+
           ],
         ),
       ),
