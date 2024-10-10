@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:one_look/pages/home/add_sumpplement/supplemantary_form.dart';
 
 import '../../../Appbar.dart';
+import '../../../core/Dropdown.dart';
+import '../../../core/DropdownGetX.dart';
 import '../../../static.dart';
 import 'dosage.dart';
 
@@ -67,7 +69,9 @@ class SupplementMain extends StatelessWidget {
               "Frequency",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
-
+            SizedBox(height:10),
+            // DropdownButtonExample(),
+            DropdownGetX()
           ],
         ),
       ),

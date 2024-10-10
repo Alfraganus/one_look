@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import 'DropdownController.dart';
 
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 
-class DropdownButtonExample extends StatefulWidget {
-  const DropdownButtonExample({super.key});
+class DropdownGetX extends StatelessWidget {
+  DropdownGetX({super.key});
 
-  @override
-  State<DropdownButtonExample> createState() => _DropdownButtonExampleState();
-}
-
-class _DropdownButtonExampleState extends State<DropdownButtonExample> {
   String dropdownValue = list.first;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+   var drondownLogic = Get.put(Dropdowncontroller());
+    return Obx(() =>  Container(
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -24,7 +23,7 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
         color: HexColor('#F0F1F9'), // Background color (Hex #FAFAFF)
       ),
       child: DropdownButton<String>(
-        value: dropdownValue,
+        value: drondownLogic.selectedValue.value,
         icon:  Padding(
           padding:  EdgeInsets.only(right: 15),
           child: Image.asset('assets/images/arrow down.png',width: 30,),
@@ -34,10 +33,10 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
         isExpanded: true,
         underline: SizedBox(),
         onChanged: (String? value) {
-          // This is called when the user selects an item.
-          setState(() {
+          drondownLogic.changeIndex(value!);
+          /* setState(() {
             dropdownValue = value!;
-          });
+          });*/
         },
         items: list.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
@@ -49,6 +48,6 @@ class _DropdownButtonExampleState extends State<DropdownButtonExample> {
           );
         }).toList(),
       ),
-    );
+    ));
   }
 }
