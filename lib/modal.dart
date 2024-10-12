@@ -15,7 +15,7 @@ void showCustomDialog(BuildContext context) {
         ),
         child: Container(
           width: screenSize.width * 0.8,
-          height: screenSize.height * 0.26,
+          height: screenSize.height * 0.30,
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -41,7 +41,8 @@ void showCustomDialog(BuildContext context) {
                 ),
                 child: TextButton(
                   onPressed: () {
-                    // Handle button press
+                    Navigator.of(context).pop();
+                    Get.toNamed('add_activity');
                   },
                   child: Text(
                     "Activity",
@@ -54,7 +55,7 @@ void showCustomDialog(BuildContext context) {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15),
+                padding:  EdgeInsets.symmetric(vertical: 20),
                 child: Container(
                   height: 65,
                   width: double.infinity,

@@ -31,7 +31,7 @@ class Omega extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text("Omega 3", style: TextStyle(
+                      Text(" Omega 3", style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold
                       ),),

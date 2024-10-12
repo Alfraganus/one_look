@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:one_look/pages/home/add_activity/activity_main.dart';
 import 'package:one_look/pages/home/add_sumpplement/supplement_main.dart';
 import 'package:one_look/pages/home/main.dart';
 
@@ -23,8 +24,10 @@ class MyApp extends StatelessWidget {
         initialRoute:  '/onboarding',
         // initialRoute: '/onboarding',
         getPages: [
-          GetPage(name: '/home', page: () => HomeMain()),
-          GetPage(name: '/', page: () => SupplementMain()),
+          GetPage(name: '/', page: () => ActivityMain()),
+          // GetPage(name: '/', page: () => HomeMain()),
+          GetPage(name: '/add_supplement', page: () => SupplementMain()),
+          GetPage(name: '/add_activity', page: () => ActivityMain()),
           // GetPage(name: '/add_supplement', page: () => SupplementMain()),
         ],
       );

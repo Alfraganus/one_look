@@ -55,7 +55,7 @@ class Stepgoal extends StatelessWidget {
                   ),
                   SizedBox(height: 6),
                   LinearPercentIndicator(
-                    width: MediaQuery.of(context).size.width * 0.75,
+                    width: MediaQuery.of(context).size.width * 0.72,
                     lineHeight: 8.0,
                     percent: 0.9,
                     progressColor: HexColor('#58C6CD'),

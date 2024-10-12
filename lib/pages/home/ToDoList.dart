@@ -27,7 +27,7 @@ Row  ToDoList(BuildContext context) {
                   child: SizedBox(width: 8),
                 ),
                 TextSpan(
-                  text: ' Add task',
+                  text: 'Add task',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

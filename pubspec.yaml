@@ -40,6 +40,7 @@ dependencies:
   http: ^1.1.0
   hexcolor: ^3.0.1
   percent_indicator: ^4.2.3
+  flutter_time_picker_spinner: ^2.0.0
 
 dev_dependencies:
   flutter_test:
